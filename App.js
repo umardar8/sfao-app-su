@@ -1,32 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./navigators/RootNavigator";
 
 export default function App() {
   return (
-    <View style={{ backgroundColor: '#667eb0' }}>
-      <Image
-        source={require("./assets/sfao-logo.png")}
-        style={{
-          padding: 40,
-          alignItems: 'center',
-        }} />
-    </View>
+    <NavigationContainer>
+      <RootNavigator />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    verticalAlign: 'top',
-  },
-  topbar: {
-    backgroundColor: '#667eb0',
-    alignItems: 'center',
-    width: 360,
-    height: 50,
-    resizeMode: 'contain',
-  }
-});
